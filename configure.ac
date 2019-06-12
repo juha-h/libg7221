@@ -306,10 +306,10 @@ if test "$enable_fixed_point" = "yes" ; then
     G722_1_USE_FIXED_POINT="#define G722_1_USE_FIXED_POINT 1"
     G722_1_VECTORS_FOR_TESTS="fixed"
 else
-    AX_FIXED_POINT_MACHINE([$host],
-        [AC_DEFINE([G722_1_USE_FIXED_POINT], [1], [Enable fixed point processing, where possible, instead of floating point])
-        G722_1_USE_FIXED_POINT="#define G722_1_USE_FIXED_POINT 1"],
-        [G722_1_USE_FIXED_POINT="#undef G722_1_USE_FIXED_POINT"])
+#    AX_FIXED_POINT_MACHINE([$host],
+#        [AC_DEFINE([G722_1_USE_FIXED_POINT], [1], [Enable fixed point processing, where possible, instead of floating point])
+#        G722_1_USE_FIXED_POINT="#define G722_1_USE_FIXED_POINT 1"],
+    G722_1_USE_FIXED_POINT="#undef G722_1_USE_FIXED_POINT"
     G722_1_VECTORS_FOR_TESTS="floating"
 fi
 AX_MISALIGNED_ACCESS_FAILS([$host],
