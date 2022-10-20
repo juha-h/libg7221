@@ -204,7 +204,7 @@ if test "${build}" = "${host}"
 then
     case "${host}" in
     x86_64-*)
-        AX_CHECK_REAL_FILE([${prefix}/lib64], libdir='$(exec_prefix)/lib64')
+        AX_CHECK_REAL_FILE([${prefix}/lib], libdir='$(exec_prefix)/lib')
         ;;
     esac
 fi
